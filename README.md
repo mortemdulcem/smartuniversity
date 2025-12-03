@@ -1,14 +1,14 @@
 # Smart University - Universite Yonetim Sistemi
 
 **BBS 515 - Nesne Yonelimli Programlama**  
-**Ogrenci:** Nurcan Denli Bayir | **No:** N25110987
+**Ogrenci:** Nurcan Denli Bayir | **No:** N25110789
 
 ---
 
 ## KURULUM / INSTALLATION
 
 ### Gereksinimler
-- Java JDK 8 veya ustu (Java 11+ onerılır)
+- Java JDK 8 veya ustu (Java 11+ onerilir)
 - Terminal veya Komut Satiri (CMD/PowerShell)
 
 ### Java Kurulu mu Kontrol Et
@@ -23,23 +23,6 @@ Eger "command not found" hatasi aliyorsaniz, Java JDK yukleyin:
 
 ---
 
-## INDIRME / DOWNLOAD
-
-### Yontem 1: Git ile (Onerilen)
-```bash
-git clone https://github.com/mortemdulcem/smartuniversity.git
-cd smartuniversity
-```
-
-### Yontem 2: ZIP Olarak
-1. Su linke gidin: https://github.com/mortemdulcem/smartuniversity
-2. Yesil "Code" butonuna tiklayin
-3. "Download ZIP" secin
-4. ZIP dosyasini cikartin
-5. Terminalde cikarilan klasore gidin
-
----
-
 ## DERLEME VE CALISTIRMA / BUILD AND RUN
 
 ### Windows Kullanicilari
@@ -49,7 +32,7 @@ cd smartuniversity
 
 **Adim 2:** Proje klasorune gidin
 ```cmd
-cd C:\Users\KULLANICI_ADI\Downloads\smartuniversity-main
+cd C:\Users\KULLANICI_ADI\Downloads\smartuniversity
 ```
 
 **Adim 3:** Derleyin
@@ -71,7 +54,7 @@ java -cp out university.Main
 
 **Adim 2:** Proje klasorune gidin
 ```bash
-cd ~/Downloads/smartuniversity-main
+cd ~/Downloads/smartuniversity
 ```
 
 **Adim 3:** Script izinlerini verin ve calistirin
@@ -211,8 +194,8 @@ GPA = Toplam(Kredi x GPA_Puani) / Toplam(Kredi)
 ```
 
 **Ornek:**
-- CS101: 4 kredi, 86% = 3.7 puan → 4 x 3.7 = 14.8
-- MATH201: 3 kredi, 72% = 2.7 puan → 3 x 2.7 = 8.1
+- CS101: 4 kredi, 86% = 3.7 puan -> 4 x 3.7 = 14.8
+- MATH201: 3 kredi, 72% = 2.7 puan -> 3 x 2.7 = 8.1
 - Toplam: (14.8 + 8.1) / (4 + 3) = 22.9 / 7 = **3.27**
 
 ---
@@ -282,7 +265,7 @@ Bu proje **kalitim kullanmadan (No Inheritance)** gelistirilmistir:
 ## SORUN GIDERME / TROUBLESHOOTING
 
 ### "javac: command not found" Hatasi
-Java JDK kurulu degil. Yukarıdaki "Gereksinimler" bolumune bakin.
+Java JDK kurulu degil. Yukaridaki "Gereksinimler" bolumune bakin.
 
 ### "could not find or load main class" Hatasi
 `out` klasorunde oldugunuzdan emin olun veya dogru yolu kullanin:
