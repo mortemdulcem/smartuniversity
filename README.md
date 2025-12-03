@@ -73,6 +73,54 @@ java -cp out university.Main
 
 ---
 
+## UNIT TESTLER / UNIT TESTS
+
+Projeyi derledikten sonra unit testleri calistirabilirsiniz:
+
+### Tum Testleri Calistir
+```bash
+javac -encoding UTF-8 -d out $(find src -name "*.java")
+java -cp out university.test.TestRunner
+```
+
+### Beklenen Cikti
+```
+========================================
+  Smart University - Unit Tests
+========================================
+
+[GradeUtils Tests]
+  [PASS] toGradePoint(95) == 4.0
+  [PASS] toGradePoint(90) == 4.0
+  ...
+
+[Student Tests]
+  [PASS] Create valid student
+  ...
+
+[GPA Calculation Tests]
+  [PASS] GPA calculation (86% + 72%) = 3.27
+  ...
+
+========================================
+  TEST RESULTS
+========================================
+  Passed: 38
+  Failed: 0
+  Total:  38
+========================================
+```
+
+### Test Kapsamı
+- **GradeUtilsTest:** Not puan donusum ve sınır degerleri
+- **StudentTest:** Ogrenci olusturma ve validasyon
+- **CourseTest:** Ders olusturma ve validasyon
+- **EnrollmentTest:** Kayit olusturma ve notlandirma
+- **UniversityTest:** CRUD islemleri ve hata durumlari
+- **GPATest:** Kredi agirlikli GPA hesaplama
+
+---
+
 ## KULLANIM KILAVUZU / USER GUIDE
 
 Program basladiginda su mesaji goreceksiniz:
