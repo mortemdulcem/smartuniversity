@@ -1,7 +1,7 @@
 # Smart University - Universite Yonetim Sistemi
 
 **BBS 515 - Nesne Yonelimli Programlama**  
-**Ogrenci:** Nurcan Denli Bayir | **No:** N25110789
+**Ogrenci:** Nurcan Denli Bayir | **No:** N25110987
 
 ---
 
