@@ -80,6 +80,10 @@ public final class Main {
                     printHelp();
                     break;
 
+                case "demo":
+                    handleDemo();
+                    break;
+
                 case "add-student":
                     handleAddStudent(tokens);
                     break;
@@ -172,6 +176,7 @@ public final class Main {
      */
     private static void printHelp() {
         System.out.println("help");
+        System.out.println("demo                                    - Load sample data");
         System.out.println("add-student <id> \"<name>\" \"<major>\"");
         System.out.println("add-course <code> \"<title>\" <credits> \"<instructor>\"");
         System.out.println("enroll <studentId> <courseCode>");
@@ -388,6 +393,43 @@ public final class Main {
             System.out.println("Loaded from ./data");
         } catch (IOException e) {
             System.out.println("Error loading data: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Handles demo command - loads sample data for testing
+     */
+    private static void handleDemo() {
+        try {
+            university.clearAll();
+            
+            // Add sample students
+            university.addStudent(1001, "Ali Yilmaz", "Bilgisayar Muhendisligi");
+            university.addStudent(1002, "Ayse Demir", "Yazilim Muhendisligi");
+            university.addStudent(1003, "Mehmet Kaya", "Elektrik Muhendisligi");
+            
+            // Add sample courses
+            university.addCourse("CS101", "Nesne Yonelimli Programlama", 4, "Prof. Dr. Ahmet Oz");
+            university.addCourse("MATH201", "Lineer Cebir", 3, "Doc. Dr. Fatma Ada");
+            university.addCourse("EE301", "Devre Analizi", 3, "Dr. Veli Can");
+            
+            // Enroll students
+            university.enroll(1001, "CS101");
+            university.enroll(1001, "MATH201");
+            university.enroll(1002, "CS101");
+            university.enroll(1003, "EE301");
+            
+            // Assign grades
+            university.assignGrade(1001, "CS101", 86);
+            university.assignGrade(1001, "MATH201", 72);
+            university.assignGrade(1002, "CS101", 90);
+            university.assignGrade(1003, "EE301", 78);
+            
+            System.out.println("Demo data loaded!");
+            System.out.println("  3 students, 3 courses, 4 enrollments");
+            System.out.println("  Try: list-students, list-courses, gpa 1001");
+        } catch (Exception e) {
+            System.out.println("Error loading demo data: " + e.getMessage());
         }
     }
 }
